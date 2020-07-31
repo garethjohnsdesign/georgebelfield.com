@@ -1,0 +1,16 @@
+<div class="grid-x align-center">
+  <div class="shrink cell">
+
+    <ul class="menu align-middle">
+      {% for block in site.socials.all() %}
+      {% switch block.type %}
+        {% case "instagram" %}
+          <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-instagram"><use xlink:href="/assets/icons/symbol-defs.svg#icon-instagram"></use></svg></a></li>
+        {% case "vimeo" %}
+          <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-vimeo"><use xlink:href="/assets/icons/symbol-defs.svg#icon-vimeo"></use></svg></a></li>
+      {% endswitch %}
+      {% endfor %}
+    </ul>
+
+  </div>
+</div>

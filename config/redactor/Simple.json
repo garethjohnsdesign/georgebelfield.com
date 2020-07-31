@@ -1,0 +1,6 @@
+{
+  "buttons": ["link", "html"],
+  "linkNewTab": true,
+  "paragraphize": false,
+  "breakline": true
+}

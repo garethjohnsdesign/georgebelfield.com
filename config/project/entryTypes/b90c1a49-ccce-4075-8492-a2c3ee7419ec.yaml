@@ -1,0 +1,37 @@
+fieldLayouts:
+  222520ce-6adf-4474-847f-9a947e41db80:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: ''
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: cc7a7777-17c5-45ef-829d-9b277cb85134
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Page
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: dfb201c1-5d86-40c2-8ef8-8a447a607828
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: fe83906d-6f96-4f77-9151-41326628a78d
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1abe3543-0a12-4298-ad7d-1a93ca2d280c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: SEO
+        sortOrder: 2
+handle: terms
+hasTitleField: false
+name: Terms
+section: bfd43785-517b-421f-b68e-a7411a40fe44
+sortOrder: 1
+titleFormat: '{section.name|raw}'

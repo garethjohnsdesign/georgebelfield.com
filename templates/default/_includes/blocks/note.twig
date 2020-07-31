@@ -1,0 +1,7 @@
+{% set image = note.image.one() %}
+<div class="light-gray-background-color excerpt">
+<div class="image--1-1" data-interchange="{% if image | length %}{% include "_includes/images/full/1-1/interchange-img-small-12-medium-6" %}{% endif %}" data-aos="fade-in">
+</div>
+</div>
+<div class="margin-top-1 serif-display h4">{{ note.title }}</div>
+<div class="margin-top-0">{{ note.copy}}</div>

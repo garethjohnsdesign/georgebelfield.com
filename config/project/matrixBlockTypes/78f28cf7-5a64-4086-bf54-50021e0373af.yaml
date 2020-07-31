@@ -1,0 +1,28 @@
+field: 177d26d8-196e-40fa-80c8-8dc29f7a4139
+fieldLayouts:
+  39114bf5-a08f-4bf3-aa28-adfe098f1ad3:
+    tabs:
+      -
+        fields:
+          692ba9cc-3828-4a62-af97-6fb06b21b8b5:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  692ba9cc-3828-4a62-af97-6fb06b21b8b5:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: socialLink
+    instructions: ''
+    name: Link
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: facebook
+name: Facebook
+sortOrder: 4

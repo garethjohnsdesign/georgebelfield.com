@@ -1,0 +1,36 @@
+// Colors
+// ------
+
+$color--white: #FFFFFF;
+$color--aqua-haze: #EFF3F6;
+$color--zircon: #DDE3E7;
+$color--carrara: #EDEDE8;
+$color--alluminium: #999999;
+$color--dolphin: #676979;
+$color--royal-blue: #3A5EE9;
+$color--black-pearl: #19212F;
+$color--licorice: #31354D;
+$color--dove-gray: #757575;
+$color--charcoal: #424242;
+$color--black: #000000;
+
+
+// Typography
+// ----------
+
+$line-height--tighter: 1;
+$line-height--tight: 1.16;
+$line-height--base: 1.6;
+
+$letter-spacing--tighter: -0.027em;
+$letter-spacing--tight: -0.018em;
+$letter-spacing--looser: 0.15em;
+$letter-spacing--loose: 0.018em;
+
+// Miscellaneous
+// -------------
+
+// Transitions
+// -------------
+
+$primary-transition: all .35s cubic-bezier(.39, .575, .565, 1);

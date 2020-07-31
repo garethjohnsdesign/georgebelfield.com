@@ -1,0 +1,24 @@
+{% set url = craft.app.request.url %}
+
+{% set globalSeoTitle = seo.seoTitle %}
+{% set globalSeoDescription = seo.seoDescription %}
+{% set asset = seo.seoImage.one() %}
+{% set globalSeoImage = craft.imager.transformImage(asset, { width: 1200, height: 630, dpr: 1, position: asset.getFocalPoint() }) %}
+
+{% set staticAssetsVersion = craft.app.config.general.staticAssetsVersion %}
+{% set env = getenv('ENVIRONMENT') %}
+
+{%- minify -%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+	{% block head %}
+    {% include "default/_includes/global/head" %}
+	{% endblock %}
+</head>
+  <body class="{% if bodyClass is defined %}{{ bodyClass }}{% endif %}">
+	{% block body %}{% endblock %}
+  {% include "default/_includes/global/scripts" %}
+	</body>
+</html>
+{%- endminify -%}

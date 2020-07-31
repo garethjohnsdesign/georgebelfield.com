@@ -1,0 +1,21 @@
+fieldLayouts:
+  24bd68a7-07a5-479b-a691-19170f5ecb14:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: ''
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: a217b31b-0447-45c7-b27f-2a37ed6bf1cf
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Tab 1'
+        sortOrder: 1
+handle: information
+hasTitleField: false
+name: Information
+section: 19ee3fd7-33f3-48fa-a08c-0fcf07702e98
+sortOrder: 1
+titleFormat: '{section.name|raw}'

@@ -1,0 +1,28 @@
+field: 177d26d8-196e-40fa-80c8-8dc29f7a4139
+fieldLayouts:
+  24637813-d5f5-434d-9da8-bde507daaaed:
+    tabs:
+      -
+        fields:
+          02501e15-c45a-4f4a-b970-07d0fd0499eb:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  02501e15-c45a-4f4a-b970-07d0fd0499eb:
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: socialLink
+    instructions: ''
+    name: Link
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: vimeo
+name: Vimeo
+sortOrder: 2

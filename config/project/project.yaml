@@ -1,0 +1,76 @@
+assets:
+  tempVolumeUid: 244f7440-a428-4998-8c23-00991784b369
+dateModified: 1596193132
+email:
+  fromEmail: info@garethjohnsdesign.com
+  fromName: 'Aoife McArdle'
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: ''
+  transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.2
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  google-cloud:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.1'
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  position-fieldtype:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.1
+  simplemap:
+    edition: lite
+    enabled: true
+    schemaVersion: 3.4.2
+  venveo-bulk-edit:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.1.0
+system:
+  edition: solo
+  live: true
+  name: 'George Belfield'
+  schemaVersion: 3.5.12
+  timeZone: UTC
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

@@ -1,0 +1,125 @@
+field: b4c9ab1f-2382-42ed-a624-d4a42f1389a7
+fieldLayouts:
+  97c01455-65ac-4457-bf0a-8e4924322dad:
+    tabs:
+      -
+        fields:
+          099b548c-4b94-462b-b757-2f82057c4496:
+            required: false
+            sortOrder: 2
+          96f5336a-775a-4e63-93fd-0e69a60f1b78:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  099b548c-4b94-462b-b757-2f82057c4496:
+    contentColumnType: string
+    fieldGroup: null
+    handle: columns
+    instructions: ''
+    name: Columns
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - One
+            -
+              - value
+              - '1'
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Two
+            -
+              - value
+              - '2'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Three
+            -
+              - value
+              - '3'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Four
+            -
+              - value
+              - '4'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Five
+            -
+              - value
+              - '5'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Six
+            -
+              - value
+              - '6'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  96f5336a-775a-4e63-93fd-0e69a60f1b78:
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: ''
+    name: Images
+    searchable: true
+    settings:
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:244f7440-a428-4998-8c23-00991784b369'
+      defaultUploadLocationSubpath: ''
+      limit: ''
+      localizeRelations: false
+      restrictFiles: ''
+      selectionLabel: 'Add an image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:244f7440-a428-4998-8c23-00991784b369'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: images
+name: Images
+sortOrder: 1

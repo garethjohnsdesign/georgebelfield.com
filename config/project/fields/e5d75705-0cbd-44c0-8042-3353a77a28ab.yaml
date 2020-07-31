@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 04b3b4bb-5a04-4d55-a1fc-39e4312e4e96
+handle: youtube
+instructions: ''
+name: Youtube
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

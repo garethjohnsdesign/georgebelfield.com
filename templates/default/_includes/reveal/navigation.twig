@@ -1,0 +1,30 @@
+<nav class="full reveal tertiary-background-color" id="overlayNavigation" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="grid-x align-center-middle" style="height: 100%">
+    <div class="shrink cell">
+
+      <ul class="vertical menu text-center">
+        {% nav category in craft.categories.group('typeOfProject').all() %}
+          <li>
+           <a href="{{ category.url }}" class="" data-toggle="overlayNavigation">{{ category.title }}</a>
+          </li>
+        {% endnav %}
+        <li><a href="/about" data-toggle="overlayNavigation">About</a></li>
+        <li><a href="/contact" data-toggle="overlayNavigation">Contact</a></li>
+      </ul>
+  
+      <div class="shrink cell text-center">
+       <ul class="menu align-center">
+          {% for block in socials.socials.all() %}
+          {% switch block.type %}
+            {% case "instagram" %}
+              <li class="padding-left"><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-instagram"><use xlink:href="/assets/icons/symbol-defs.svg#icon-instagram"></use></svg></a></li>
+            {% case "vimeo" %}
+              <li><a href="{{block.socialLink}}" target="_blank"><svg class="icon icon-vimeo"><use xlink:href="/assets/icons/symbol-defs.svg#icon-vimeo"></use></svg></a></li>
+          {% endswitch %}
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>

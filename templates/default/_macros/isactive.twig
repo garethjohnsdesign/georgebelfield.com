@@ -1,0 +1,1 @@
+{% macro isActive(segment) %}{% if craft.app.request.segments|first == segment %} class="active"{% else %} class="un-active"{% endif %}{% endmacro %}

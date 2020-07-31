@@ -1,0 +1,75 @@
+{% import "_macros/isactive" as isactive %}
+
+<!-- Mobile Navigation -->
+{#
+<div class="grid-x grid-padding-x grid-padding-y hide-for-medium" id="swup-header" style="z-index: 14">
+  <div class="shrink cell">
+    <a class="" type="button" aria-label="Navigation" data-toggle="overlayNavigation">
+    {{ currentSite.name }}
+    </a>
+  </div>
+</div>
+#}
+<!-- End Mobile Navigation -->
+
+<!-- Desktop Navigation -->
+<div class="grid-x grid-padding-x grid-padding-y padding-bottom-0 align-justify align-middle navigation" id="swup-header">
+
+  <div class="auto cell align-middle padding-bottom-0">
+  		<ul class="menu">
+      <li>
+      <a data-toggle="offCanvasLeft">
+      {% if bodyClass == "project" %}
+      {{ entry.brandArtist | striptags}} <span class="font-italic padding-left-1">{{ entry.title }}</span>
+      {% elseif bodyClass == "category" %}
+      {{ currentSite.name }} <span class="font-italic padding-left-1">{{ category.title }}</span>
+      {% elseif bodyClass == "information" %}
+      {{ currentSite.name }} <span class="font-italic padding-left-1">{{ entry.title}}</span>
+      {% else %}
+      {{ currentSite.name }}
+      {% endif %}
+      </a>
+      </li>
+    </ul>
+  </div>
+
+  {% if bodyClass == "project" %}
+  <div class="shrink cell align-middle padding-bottom-0 show-for-medium">
+  		<ul class="menu">
+      <li>
+      <a data-open="reveal{{entry.id}}" class="font-italic">
+      Credits
+      </a>
+      </li>
+    </ul>
+  </div>
+  {% endif %}
+  		
+
+{#
+    <ul class="menu simple">
+      <li {{ isactive.isActive('works') }}><a href="/projects">Menu</a></li>
+#}
+{#       <li {{ isactive.isActive('works') }}><a href="/projects">Projects</a></li> #}
+{#
+    {% set categoryQuery = craft.categories().group('typeOfProject') %}
+    
+    {% set categories = categoryQuery.all() %}
+    
+    {% nav category in categories %}
+    <li{{ isactive.isActive(category.slug) }}>
+    <a href="{{ category.url }}">{{ category.title }}</a>
+    </li>
+    {% endnav %}
+    <li {{ isactive.isActive('information') }}><a href="/information">Information</a></li>
+#}
+{#     </ul> #}
+
+
+{#
+  <div class="auto cell text-right padding-bottom-0">
+    <a href="/" class="">{{ currentSite.name }}</a>
+  </div>
+#}
+</div>
+<!-- End Desktop Navigation -->

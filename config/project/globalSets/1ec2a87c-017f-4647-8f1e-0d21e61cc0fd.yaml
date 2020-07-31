@@ -1,0 +1,15 @@
+fieldLayouts:
+  f00617d5-bda5-43c2-ac10-cb1321ffec09:
+    tabs:
+      -
+        fields:
+          9ccc8465-065e-43d4-a80c-3659fb4e3376:
+            required: false
+            sortOrder: 2
+          e749f839-9bf1-45c4-95a0-85b305edeaa0:
+            required: false
+            sortOrder: 1
+        name: 'Tab 1'
+        sortOrder: 1
+handle: site
+name: Site

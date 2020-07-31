@@ -1,0 +1,21 @@
+fieldLayouts:
+  70be4161-7832-4a88-9322-0050c1bdf35e:
+    tabs:
+      -
+        fields:
+          1abe3543-0a12-4298-ad7d-1a93ca2d280c:
+            required: false
+            sortOrder: 4
+          1b93a0c4-28cb-4536-935a-899b559bf95d:
+            required: false
+            sortOrder: 3
+          dfb201c1-5d86-40c2-8ef8-8a447a607828:
+            required: false
+            sortOrder: 1
+          fe83906d-6f96-4f77-9151-41326628a78d:
+            required: false
+            sortOrder: 2
+        name: SEO
+        sortOrder: 1
+handle: seo
+name: SEO

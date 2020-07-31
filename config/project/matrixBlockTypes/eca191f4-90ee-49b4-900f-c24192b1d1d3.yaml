@@ -1,0 +1,59 @@
+field: a217b31b-0447-45c7-b27f-2a37ed6bf1cf
+fieldLayouts:
+  affa8c09-5612-4904-bed5-08df63a5ae2b:
+    tabs:
+      -
+        fields:
+          f2088d7b-abe5-4407-8b17-d7ceffe579ad:
+            required: true
+            sortOrder: 1
+          f7a78fc9-6132-45bd-8b8d-902c5886b9a6:
+            required: true
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+fields:
+  f2088d7b-abe5-4407-8b17-d7ceffe579ad:
+    contentColumnType: text
+    fieldGroup: null
+    handle: header
+    instructions: ''
+    name: Header
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f7a78fc9-6132-45bd-8b8d-902c5886b9a6:
+    contentColumnType: text
+    fieldGroup: null
+    handle: copy
+    instructions: ''
+    name: Copy
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Detail.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: detail
+name: Detail
+sortOrder: 1

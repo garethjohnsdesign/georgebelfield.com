@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: information
+name: Information
+propagationMethod: all
+siteSettings:
+  8a2043ba-0ab6-482c-bb78-9c06b90e1891:
+    enabledByDefault: true
+    hasUrls: true
+    template: information/information
+    uriFormat: information
+type: single

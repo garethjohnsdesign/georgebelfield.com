@@ -1,0 +1,11 @@
+enableVersioning: false
+handle: privacyPolicy
+name: 'Privacy Policy'
+propagationMethod: all
+siteSettings:
+  8a2043ba-0ab6-482c-bb78-9c06b90e1891:
+    enabledByDefault: true
+    hasUrls: true
+    template: page/page
+    uriFormat: privacy-policy
+type: single

@@ -1,0 +1,10 @@
+handle: typeOfProject
+name: 'Type of Project'
+siteSettings:
+  8a2043ba-0ab6-482c-bb78-9c06b90e1891:
+    hasUrls: true
+    template: category/category
+    uriFormat: '{slug}'
+structure:
+  maxLevels: 1
+  uid: 1a6f42d9-9625-451f-9a62-9df4884de743

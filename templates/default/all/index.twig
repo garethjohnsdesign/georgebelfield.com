@@ -1,0 +1,30 @@
+{% set bodyClass = 'all' %}
+
+{% set projects = craft.entries
+.section('projects')
+.orderBy('postDate desc')
+.all() %}
+
+{% extends "default/_layouts/site" %}
+
+{% block navigation %}
+{% include "_includes/global/navigation" %}
+{% endblock %}
+
+{% block main %}
+<!-- Projects -->
+{% set projectCount = projects|length %}
+<div class="grid-container">
+<div class="grid-x {% if projectCount > 2 %}align-left{% else %}align-center{% endif %}">
+  {% for project in projects %}
+    <div class="small-12 medium-6 {% if projectCount > 2 %}xlarge-4{% else %}xlarge-4{% endif %} xxlarge-4 cell padding">
+    {% include "_includes/blocks/excerpt" %}
+    </div>
+  {% endfor %}
+</div>
+</div>
+<!-- End Projects -->
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

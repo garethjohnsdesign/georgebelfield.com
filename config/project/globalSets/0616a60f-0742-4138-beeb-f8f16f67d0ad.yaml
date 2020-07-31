@@ -1,0 +1,12 @@
+fieldLayouts:
+  e656eeae-1240-425e-a3af-94886e7158df:
+    tabs:
+      -
+        fields:
+          177d26d8-196e-40fa-80c8-8dc29f7a4139:
+            required: false
+            sortOrder: 1
+        name: 'Tab 1'
+        sortOrder: 1
+handle: socials
+name: Socials

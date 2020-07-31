@@ -1,0 +1,26 @@
+fieldLayouts:
+  7c635066-4e02-466a-9a7f-4de17802b349:
+    tabs:
+      -
+        fields:
+          1c4d0151-1407-47f3-8ac7-11bf44598233:
+            required: false
+            sortOrder: 1
+          d977e3c9-4f15-497a-b9a5-cc6806a80c25:
+            required: false
+            sortOrder: 2
+        name: 'Tab 1'
+        sortOrder: 1
+handle: uploads
+hasUrls: true
+name: Uploads
+settings:
+  bucket: george-belfield
+  bucketSelectionMode: choose
+  expires: ''
+  keyFileContents: '{  "type": "service_account",  "project_id": "reformation-studio",  "private_key_id": "64b451f38cf38cb6d69494941182554789bd0cd1",  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCy5VzyqEjTIczK\nHx2nIO3m8mUFn5VDBJqKLZuXb/EaZsXXDFJNAP+ln30ofWETfXCqlareioX3RcYa\nHJmdpRb7b7RQ136Pm1COT4g7SRmHp2BP+m9n5VMv5rcZHYpd1S7oaodieqtprk/I\n3KrfzEewG+YzOpX0XiwJUmNaRgvx4tpI75YO1/n/L+FRAPu+dNYMZoqojmqR/DCX\nNgEx6mUUw6Zua+LFrG1+KW8536u8rB0XLSPsGL+B+rkv1+XC60QCTy1Ga7MMCP16\nzXlvZAVjnmip95Beb15Bedx7jJX7R2NYId2Uj3UN0hUP7As60fu1xiKwyaIb9fT5\nulRfj6vTAgMBAAECggEAUUYeuid2HmWGsnT8dcdiDcAl4S4lE7NtukUKIPy8XrA+\nRXrVkSJZApe4tsJvbflZTEZ+wGfSgQpz+7zulU5BaK3RD8E3QGrhaCX90GFfdd+2\nw98U6fCnoGWC3agsCoEltHVhWH4+jd6hZLHL96zJDNs/9BozsjdubjW96W9VUehp\nYB++kOmGnttEIh067gN384DgCR2sHpdjROTqZUGaQdSacLOynOt6vtz1l5PFXDAI\ne53He/A6Mx8ceuU0925NfD9Wco+R7alQVGKnh8i8KIZ6VN4KMHs+nsLliQPZcF6m\niyG3gk0Ck5TD83x1u/r5B2BY0E3+bQb5uUlWdIogYQKBgQDiJk2doUVFvsUG2mVO\nZRWytj6j6A9zsgegnDtThCM1nXw8g8uG4kuiNZFS2owVtCTMhONc71zwCsYTtg7g\nVkuDmDrV4EPfiXAVUNhPycYq+NepD9CE8krG+Pne7Dv/IcbiE8oj3Qh3E/2XaBUl\nMdjQ0HxAgMiiNQ0EAvDwqhIFOwKBgQDKglZRf64M03aSmw1nZsOZPhvDysgkDAiQ\nFMWd9cLsyK2tYhrAEWlcVKa5RBfbBl34ImPjjXWdQiB6iWbvaF2ba6vv7ikGlumb\n2YXEL35ZqIFat7WpMXUGfbWN2p9PQokhLSjyPZ5wr85Wr9UH6GXJj+XIYzl3N7y9\nlFiwD6mqSQKBgGhrLyM9N3MAppCHfoc3/VDK/RlJKPlOll7+RBZHyMoUsSxv3iWl\njy6SdUtARbYvu14DbceXbd4X22V2hl/m+G8GdwQRzMUF/I6bCYWtsKZex5T0DF+W\nUBiXFShtAzbGLcJtSMROZn406L5j/H90CJxB510RGZJr1Fqp0P4OSMvJAoGBAKve\nZG30w/4EtnyEdaLNV7JGQQAxqRzWzamix3lhbBbT1nrxaSybWmVPPtS70tdDlxsR\n7N7iXvChf7kfxinn1JIklp8h7NW33Po1ac7wU/a6CVa51caLv/tLU3vaER0Oph1v\nG3JEE6UlwCRYRJ/agBDKPMWOWOYyetAXCBIcqO1pAoGBAMVCSp7caAehDGIURhMa\nf87iT/YaoZdc6G6P8doC/E3+qOMEbTSByiFQTeUlS/AIssquiytdB4ZgfrKHtxSq\nodzKnohVntJ5mEhi4L6yyOufWhvDVQzXxwvtEYNEXvg7Jguf9tcBVOzN7srGX+2W\nCWcU9P/sdHsLfF8TSWFfvWbB\n-----END PRIVATE KEY-----\n",  "client_email": "cloud-storage@reformation-studio.iam.gserviceaccount.com",  "client_id": "108837283432571323348",  "auth_uri": "https://accounts.google.com/o/oauth2/auth",  "token_uri": "https://oauth2.googleapis.com/token",  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloud-storage%40reformation-studio.iam.gserviceaccount.com"}'
+  projectId: reformation-studio
+  subfolder: ''
+sortOrder: 1
+type: craft\googlecloud\Volume
+url: 'http://storage.googleapis.com/george-belfield/'

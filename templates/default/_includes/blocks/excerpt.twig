@@ -1,0 +1,24 @@
+<a href="{{ project.url }}">
+  {% set image = project.image.one() %}
+  <div class="light-gray-background-color excerpt ">
+  {% if image | length %}
+  <div class="image--24-1" data-interchange="{% if image | length %}{% include "_includes/images/full/24-1/interchange-img-small-12-medium-12" %}{% endif %}" data-aos="new-animation">
+
+  {% if project.previewVideo %}
+    <video autoplay muted loop class="video" poster="" data-aos="new-animation">
+      <source data-src="{{ project.previewVideo }}" type="video/mp4">
+    </video>
+  {% endif %}
+
+  </div>
+  {% endif %}
+  </div>
+  <div class="grid-x align-justify padding-top-half">
+    <div class="auto cell">
+    {{project.brandArtist |striptags }} — <span class="font-italic">{{project.title}}</span>
+    </div>
+    <div class="shrink cell medium-gray">
+{#     {{project.brandArtist |striptags }} #}
+    </div>
+  </div>
+</a>

@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: afa397d2-521d-48d6-acb2-4d4e53b2fd50
+handle: contacts
+instructions: ''
+name: Contacts
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_contacts_1}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,649 @@
+//  Table of Contents:
+//
+//   1. Mixins
+//   2. Global
+//   3. Animations
+//   4. Color
+//   5. Typography
+//   6. Layout
+
+
+// 1. Mixins
+// ---------
+
+@mixin links ($link, $hover) {
+  a {
+    color: $link;
+    &:hover {
+      color: $hover;   
+    }
+  }
+}
+
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+ .content {
+//     transition: $primary-transition;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+// 2. Global
+// ---------
+
+.menu .menu-text {
+font-weight: normal;
+}
+
+.off-canvas-wrapper {
+  overflow: visible;
+}
+
+.off-canvas-content {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--vh, 1vh) * 100);
+  font-kerning: normal;
+}
+
+.off-canvas {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  z-index: 2
+}
+
+
+
+body {
+  cursor: default;
+  font-kerning: normal;
+}
+
+svg {
+  max-width: 100%;
+}
+
+::selection {
+  background: $primary-color;
+  color: $black;
+}
+
+:focus {
+  outline: 0;
+}
+
+// 3. Animations
+// -------------
+
+.swup-transition-fade-up {
+  transition: opacity 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html.is-animating .swup-transition-fade-up {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.swup-transition-fade {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+html.is-animating .swup-transition-fade {
+  opacity: 0;
+}
+
+.swup-transition-color {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+html.is-animating .swup-transition-color {
+  opacity: 0;
+}
+
+// 4. Color
+// --------
+
+.primary-color {
+  color: get-color(primary);
+}
+
+.secondary-color {
+  color: get-color(secondary);
+}
+
+.primary-background-color {
+  background-color: get-color(primary);
+  color: $white;
+  @include links($white, $secondary-color)
+}
+
+
+.secondary-background-color {
+  background-color: get-color(secondary);
+  color: $primary-color;
+  @include links($primary-color, $secondary-color)
+}
+
+
+.white-background-color {
+  background-color: $white;
+  color: $black;
+  @include links($primary-color, $secondary-color)
+}
+
+.light-gray-background-color {
+  background-color: $light-gray;
+  color: $black;
+  @include links($primary-color, $secondary-color)
+}
+
+.dark-gray-background-color {
+  background-color: $dark-gray;
+  color: $white;
+  @include links($primary-color, $secondary-color)
+}
+
+
+.black-background-color {
+  background-color: $black;
+  color: $white;
+  @include links($white, $secondary-color)
+}
+
+.white {
+  color: $white;
+  @include links ($white, $medium-gray);
+}
+
+.medium-gray {
+  color: $medium-gray;
+  @include links ($medium-gray, $black);
+}
+
+.light-gray {
+  color: $light-gray;
+  @include links ($light-gray, $medium-gray);
+}
+
+.dark-gray {
+  color: $dark-gray;
+  @include links ($dark-gray, $black);
+}
+
+.black {
+  color: $black;
+  @include links ($black, $medium-gray);
+}
+
+// 5. Typography
+// -------------
+
+.underline {
+  text-decoration: underline;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+p a {
+  color: $primary-color;
+  &:hover {
+    color: $secondary-color;   
+  }
+}
+
+.link {
+  color: get-color(secondary);
+  &:hover {
+    color: get-color(primary);   
+  }
+}
+
+.logo {
+  font-family: $logo;
+}
+
+.sans-light {
+  font-family: $sans-light;
+}
+
+.sans-regular {
+  font-family: $sans-regular;
+}
+
+.sans-bold {
+  font-family: $sans-bold;
+}
+
+.sans-display {
+  font-family: $sans-display;
+}
+
+.serif-light {
+  font-family: $serif-light;
+}
+
+.serif-regular {
+  font-family: $serif-regular;
+}
+
+.serif-italic {
+  font-family: $serif-italic;
+}
+
+.serif-bold {
+  font-family: $serif-bold;
+}
+
+.serif-display {
+  font-family: $serif-display;
+}
+
+.small {
+  font-size: $small-font-size;
+}
+
+.letter-spacing--loose {
+  letter-spacing: $letter-spacing--loose;
+}
+
+// 6. Layout
+// ---------
+
+.wrapper {
+  @include padding(1, 1, 0, 1);
+}
+
+.image--1-1 {
+  @include aspect-ratio (1, 1);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+
+.image--5-4 {
+  @include aspect-ratio (5, 4);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--4-6 {
+  @include aspect-ratio (4, 6);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--6-4 {
+  @include aspect-ratio (6, 4);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--3-4 {
+  @include aspect-ratio (3, 4);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--5-7 {
+  @include aspect-ratio (5, 7);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--7-5 {
+  @include aspect-ratio (7, 5);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--16-9 {
+  @include aspect-ratio (16, 9);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--24-1 {
+  @include aspect-ratio (2.4, 1);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+.image--hero {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  background-size: cover; 
+  background-position: 50%;
+}
+
+
+// 6. Navigation
+// -------------
+
+.navigation {
+  width: 100%;
+}
+
+.hamburger-inner {
+  &,
+  &::before,
+  &::after {
+    background-color: $white;
+  }
+}
+
+// 9. Home
+// -------
+
+.off-canvas .menu .active > a {
+  background: transparent;
+  color: $black;
+}
+
+.swiper-button-prev-test,
+.swiper-button-next-test {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 0;
+}
+
+.swiper-button-prev-test {
+  left: 0rem;
+  right: auto;
+}
+.swiper-button-next-test {
+  right: 0rem;
+  left: auto;
+}
+
+.swiper-button-prev-test {
+cursor: w-resize;
+cursor: url('/assets/img/arrow-left.png') 16 16, auto !important;
+cursor: -webkit-image-set(
+url('/assets/img/arrow-left.png') 1x,
+url('/assets/img/arrow-left@2x.png') 2x,
+url('/assets/img/arrow-left@3x.png') 3x
+) 16 16, auto !important;
+}
+
+.swiper-button-next-test {
+  cursor: e-resize;
+  cursor: url('/assets/img/arrow-right.png') 16 16, auto !important;
+  cursor: -webkit-image-set(
+  url('/assets/img/arrow-right.png') 1x,
+  url('/assets/img/arrow-right@2x.png') 2x,
+  url('/assets/img/arrow-right@3x.png') 3x
+  ) 16 16, auto !important;
+}
+
+
+.excerpt {
+  .content {
+    @include opacity(1);
+    background: rgba($black, 0);
+  }
+  &:hover .content {
+    transition: $primary-transition;
+    background: rgba($black, 0.25);
+    @include opacity(1);
+  }
+}
+
+.footer .menu li:last-child a {
+  padding-right: 0;
+}
+
+.active {
+  color: $primary-color !important;
+}
+
+.hamburger-inner--active {
+  .hamburger-inner {
+    &,
+    &::before,
+    &::after {
+      background-color: $primary-color !important;
+    }
+  }
+}
+
+p:last-child {
+ margin-bottom: 0;
+}
+
+.testing {
+ transform: scale(1.04);
+}
+
+.excerpt__wrapper {
+  overflow: hidden;
+}
+
+
+[data-aos="new-animation"] {
+ filter: blur(20px);
+//  opacity: 0;
+//   transition-property: transform, opacity;
+  &.aos-animate {
+    filter: blur(0px);
+//     opacity: 1
+  }
+}
+
+
+.reveal {
+  @include breakpoint(medium down) {
+  @include padding(1, 1, 1, 1);
+  }
+  @include padding(2, 2, 2, 2);
+}
+
+.border-bottom {
+  border-bottom: 1px solid $dark-gray
+}
+
+.plyr--full-ui input[type=range] {
+  color: $black;
+}
+
+.plyr__control--overlaid {
+  background: rgba($black, .0);
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+  background: $black;
+}
+
+.plyr__control.plyr__tab-focus {
+  box-shadow: 0 0 0 5px rgba($black, .5);
+}
+
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+  background: $black;
+}
+
+.tippy-box[data-theme~='custom'] {
+  background-color: transparent;
+  color: $black;
+  font-size: 1rem;
+}
+
+.tippy-tooltip.custom-theme[data-animatefill] {
+  background-color: transparent;
+}
+
+.tippy-tooltip.custom-theme .tippy-backdrop {
+  background-color: transparent;
+}
+
+.tippy-box[data-theme~='custom'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: transparent;
+}
+.tippy-box[data-theme~='custom'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: transparent;
+}
+.tippy-box[data-theme~='custom'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: transparent;
+}
+.tippy-box[data-theme~='custom'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: transparent;
+}
+.excerpt {
+position: relative;
+overflow: hidden;
+}
+
+.video {
+  min-width: 100%; 
+  min-height: 100%;
+//   max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.home .video {
+  z-index: -1;
+}
+
+
+.excerpt {
+  .video {
+    @include opacity(0);
+  }
+  &:hover .video {
+    @include opacity(1);
+  }
+}
+
+.padding-left {
+padding-left: 0.5rem !important;
+}
+
+.padding {
+  @include breakpoint(small) {
+    @include padding(1, 1, 1, 1);
+  }
+/*
+  @include breakpoint(large) {
+    @include padding(2, 2, 2, 2);
+  }
+*/
+  @include breakpoint(xlarge) {
+    @include padding(1.5, 1.5, 1.5, 1.5);
+  }
+}
+
+/*
+.home__hero {
+min-height: 100vh;
+padding-top: 6rem;
+padding-bottom: 6rem;
+position: relative;
+}
+*/
+
+/*
+.home__hero__image {
+height: 100%;
+width: 100%;
+position: absolute;
+z-index: -1;
+}
+
+.image--hero {
+  height: 100%;
+  background-size: cover; 
+  @include breakpoint(small) {
+  background-position: 50% 50%;
+  }
+  @include breakpoint(medium) {
+  background-position: 50% 50%;
+  }
+}
+*/
+
+.home .navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 210;
+  background-color: transparent;
+  @include links ($white, $white);
+}
+
+.opacity-50 {
+  @include opacity(0.5);
+}
+
+.button-group {
+  background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
+}
+
+.button--correct {
+  padding-top: 11px;
+}
+
+.detail ul {
+  margin-left: 0rem;
+  list-style-type: none;
+}
+
+.padding-top-half {
+  padding-top: 0.75rem
+}
+
+[data-aos="new-animation"] {
+ filter: blur(20px);
+//  opacity: 0;
+//   transition-property: transform, opacity;
+  &.aos-animate {
+    filter: blur(0px);
+//     opacity: 1
+  }
+}

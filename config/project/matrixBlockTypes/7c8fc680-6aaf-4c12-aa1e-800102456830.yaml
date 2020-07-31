@@ -1,0 +1,113 @@
+field: 4fea65b6-ace0-410c-b9b0-006dfb431f65
+fieldLayouts:
+  ba6097d9-bec7-4a30-a1b6-cb3eda355acb:
+    tabs:
+      -
+        fields:
+          49a7f42c-8dcb-4154-bffb-0021a39f9a68:
+            required: false
+            sortOrder: 2
+          91cc96ec-1c55-466d-ab9f-36bc99ff50cc:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  49a7f42c-8dcb-4154-bffb-0021a39f9a68:
+    contentColumnType: text
+    fieldGroup: null
+    handle: contact
+    instructions: ''
+    name: Contact
+    searchable: true
+    settings:
+      addRowLabel: 'Add a contact'
+      columnType: text
+      columns:
+        __assoc__:
+          -
+            - col1
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Name
+                -
+                  - handle
+                  - name
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+          -
+            - col2
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Email
+                -
+                  - handle
+                  - email
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - email
+          -
+            - col3
+            -
+              __assoc__:
+                -
+                  - heading
+                  - Department
+                -
+                  - handle
+                  - department
+                -
+                  - width
+                  - ''
+                -
+                  - type
+                  - singleline
+      defaults:
+        -
+          __assoc__:
+            -
+              - col1
+              - ''
+            -
+              - col2
+              - ''
+            -
+              - col3
+              - ''
+      maxRows: ''
+      minRows: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Table
+  91cc96ec-1c55-466d-ab9f-36bc99ff50cc:
+    contentColumnType: text
+    fieldGroup: null
+    handle: header
+    instructions: ''
+    name: Header
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: contact
+name: Contact
+sortOrder: 1

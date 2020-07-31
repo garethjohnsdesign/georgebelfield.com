@@ -1,0 +1,194 @@
+{% set bodyClass = 'project' %}
+
+{% if entry.seoTitle|length %}
+{% set seoTitle = entry.seoTitle %}
+{% elseif entry.title|length %}
+{% set seoTitle = entry.title %}
+{% endif %}
+
+{% if entry.seoDescription|length %}
+{% set seoDescription = entry.seoDescription|striptags|raw %}
+{% endif %}
+
+{% if entry.image|length  %}
+{% set asset = entry.image.one() %}
+{% set seoImage = craft.imager.transformImage(asset, { width: 1200, height: 630, dpr: 1, position: asset.getFocalPoint() }) %}
+{% endif %}
+
+{# Set parameters for prev/next elements list #}
+{% set params = craft.entries
+.section('projects')
+.relatedTo(entry.typeOfProject)
+.orderBy('postDate desc') %}
+
+{# Get the prev/next elements #}
+{% set prevEntry = entry.getPrev(params) %}
+{% set nextEntry = entry.getNext(params) %}
+
+
+{% extends "_layouts/site" %}
+
+
+{% block navigation %}
+{% include "_includes/global/navigation" %}
+{% endblock %}
+
+
+{% block main %}
+<!-- Content -->
+<div class="grid-x grid-padding-x grid-padding-y align-center">
+
+<!-- Previous -->
+<div class="auto cell show-for-large project__pagination">
+  {% if prevEntry %}
+  <a href="{{ prevEntry.url }}">
+    <div class="grid-y align-center" style="height: 100%;" data-tippy-content="{{ prevEntry.title }}">
+    </div>
+  </a>
+  {% endif %}
+</div>
+<!-- End Previous -->
+
+<!-- Center -->
+<div class="small-12 medium-10 large-10 xlarge-8 cell">
+
+
+{% if entry.vimeo %}
+<div class="grid-container">
+<div class="grid-x grid-padding-x grid-padding-y align-center">
+  <div class="small-12 cell text-center">
+    <div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="{{ entry.vimeo }}"></div>
+  </div>
+</div>
+</div>
+{% endif %}
+
+{% if entry.youtube %}
+<div class="grid-container">
+<div class="grid-x grid-padding-x grid-padding-y align-center">
+  <div class="small-12 cell text-center">
+    <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="{{ entry.youtube }}"></div>
+  </div>
+</div>
+</div>
+{% endif %}
+
+<!-- Images -->
+<div class="grid-container">
+<div class="project__grid" id="project__grid" data-toggler=".open">
+{% for matrixBlock in entry.images.all() %}
+{% switch matrixBlock.type %}
+    {% case "images" %}
+    <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-{{(matrixBlock.columns.value / 2) | round(0, 'ceil')}} large-up-{% if matrixBlock.columns %}{{ matrixBlock.columns.value }}{% else %}1{% endif %} align-middle">
+      {% for image in matrixBlock.images.all() %}
+      {% switch image.aspectRatio %}
+      {% case "1-1" or "5-4" or "5-7" or "6-4" or "7-5" or "16-9" or "3-4" %}
+      <div class="cell">
+        <div class="light-gray-background-color">
+          <div class="image--{{image.aspectRatio}}" {% if image %}data-interchange="{% include "_includes/images/contained/"~image.aspectRatio~"/interchange-img-small-12-medium-6" %}" data-aos="fade-in" data-aos-delay="100"{% endif %}></div>
+        </div>
+      </div>
+      {% case "4-6" %}
+      <div class="cell">
+      <div class="grid-x align-center">
+      <div class="small-12 medium-8 cell text-center">
+        <div class="light-gray-background-color">
+          <div class="image--{{image.aspectRatio}}" {% if image %}data-interchange="{% include "_includes/images/contained/"~image.aspectRatio~"/interchange-img-small-12-medium-6" %}" data-aos="fade-in" data-aos-delay="100"{% endif %}></div>
+        </div>
+      </div>
+      </div>
+      </div>
+      {% default %}
+      <div class="cell">
+        <div class="image--7-5" data-interchange="{% include "_includes/images/contained/7-5/interchange-img-small-12-medium-12" %}"></div>
+      </div>
+      {% endswitch %}
+      {% endfor %}
+    </div>
+{% endswitch %}
+{% endfor %}
+</div>
+</div>
+<!-- End Images -->
+
+<!-- Mobile Pagination -->
+{% if nextEntry %}
+<div class="grid-x grid-padding-x grid-padding-y align-center hide-for-large">
+  <div class="shrink cell text-center">
+    <a href="{{ nextEntry.url }}"><svg class="icon icon-arrows icon-arrow_forward"><use xlink:href="/assets/icons/symbol-defs.svg#icon-arrow_forward"></use></svg></a>
+  </div>
+</div>
+{% endif %}
+<!-- End Mobile Pagination -->
+      
+</div>
+<!-- End Center -->
+
+<!-- Next -->
+<div class="auto cell show-for-large project__pagination">
+  {% if nextEntry %}
+  <a href="{{ nextEntry.url }}">
+    <div class="grid-y align-center" style="height: 100%;" data-tippy-content="{{ nextEntry.title }}">
+    </div>
+  </a>
+  {% endif %}
+</div>
+<!-- End Next -->
+
+</div>   
+<!-- End Content -->
+
+
+<!-- About -->
+{% if entry.copy|length %}
+<div class="full reveal" id="reveal{{entry.id}}" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+
+  <div class="grid-x align-center-middle" style="min-height: 100%">
+    <div class="small-12 cell padding-vertical-3">
+
+      <div class="grid-x grid-padding-x grid-padding-y grid-margin-y align-center">
+        <div class="small-11 medium-8 cell">
+        {{entry.copy}}
+        <a class="dark-gray" data-close aria-label="Close modal" type="button">Close</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endif %}
+<!-- End About -->
+
+<!-- Credits -->
+<div class="full reveal" id="reveal{{entry.id}}" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
+
+  <div class="grid-x align-center-middle" style="min-height: 100%">
+    <div class="small-12 cell padding-vertical-3">
+
+      <div class="grid-x grid-padding-x grid-padding-y grid-margin-y align-center">
+        <div class="small-8 cell text-center">
+
+        {% if entry.producer|length %}<div>Producer<span class="padding-left dark-gray">{{ entry.producer | striptags('<a>') | raw }}</span></div>{% endif %}
+        {% if entry.productionCompany|length %}<div>Production<span class="padding-left dark-gray">{{ entry.productionCompany | striptags('<a>') | raw  }}</span></div>{% endif %}
+        {% if entry.agency|length %}<div>Agency<span class="padding-left dark-gray">{{ entry.agency | striptags('<a>') | raw }}</span></div>{% endif %}
+        <div class="medium-gray margin-top-1">{{ entry.postDate|date('Y') }}</div>
+
+
+
+        <a class="dark-gray" data-close aria-label="Close modal" type="button">Close</a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- End Credits -->
+{% endblock %}
+
+
+{% block footer %}
+{% include "_includes/global/footer" %}
+{% endblock %}

@@ -19,7 +19,7 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "^3.5.0-RC1",
+    "craftcms/cms": "3.5.0-RC5",
     "vlucas/phpdotenv": "^2.4.0",
     "craftcms/google-cloud": "1.4.0",
     "craftcms/redactor": "2.6.1",

@@ -20,12 +20,11 @@
 
 <!-- Projects -->
 {% set projectCount = projects|length %}
-<div class="padding-bottom-2">
-
+<div class="grid-container">
 <div class="grid-x grid-padding-x grid-padding-y {% if projectCount > 2 %}align-center{% else %}align-center{% endif %}">
   {% for project in projects %}
 {#     <div class="small-12 medium-12 {% if projectCount > 2 %}xlarge-6{% else %}xlarge-6{% endif %} xxlarge-4 cell padding-bottom-0"> #}
-    <div class="small-12 medium-8 {% if projectCount > 2 %}xlarge-8{% else %}xlarge-8{% endif %} xxlarge-8 cell">
+    <div class="small-12 medium-10 large-8 xxlarge-8 xxlarge-6 cell">
     {% include "_includes/blocks/excerpt" %}
     </div>
   {% endfor %}

@@ -77,7 +77,6 @@ $light-gray: #f2f2f2;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #111111;
-$black: #292b2c;
 $white: #fefefe;
 /*
 $foundation-palette: (
@@ -962,7 +961,7 @@ $grid-margin-gutters: (
 );
 */
 $grid-margin-gutters: (
-  small: 48px,
+  small: 32px,
   medium: 48px,
   large: 48px,
   xlarge: 64px,
@@ -971,7 +970,7 @@ $grid-margin-gutters: (
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
 $grid-container-padding: (
-  small: 0px,
+  small: 32px,
   medium: 48px,
   large: 48px,
   xlarge: 64px,

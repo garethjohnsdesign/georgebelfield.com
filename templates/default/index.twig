@@ -20,7 +20,7 @@
 
 {% block main %}
 {# Hero #}
-<div class="swiper-container" id="carousel--hero" data-aos="fade-in" data-aos-delay="100">
+<div class="swiper-container" id="carousel--hero">
   <div class="swiper-wrapper">
     {% for project in projects %}
     {% set image = project.image.one() %}
@@ -30,7 +30,7 @@
         <div class="grid-y height-100 align-right content">
           <div class="shrink cell white">
 
-            <div class="grid-x grid-padding-x grid-padding-y" data-aos="fade-in" data-aos-delay="500">
+            <div class="grid-x grid-padding-x grid-padding-y" data-aos="fade-in">
               <div class="small-12 cell">
                 <a href="{{ project.url }}">
                   <div>{{project.brandArtist |striptags }} — {{project.title}}</div>

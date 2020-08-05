@@ -341,6 +341,12 @@ p a {
   background-position: 50%;
 }
 
+.image--185-1 {
+  @include aspect-ratio (1.85, 1);
+  background-size: cover; 
+  background-position: 50%;
+}
+
 .image--hero {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
@@ -553,7 +559,8 @@ overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
     @include opacity(0);
   }
   &:hover .video {

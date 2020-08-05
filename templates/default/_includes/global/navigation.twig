@@ -23,7 +23,7 @@
       {{ entry.brandArtist | striptags}} <span class="font-italic padding-left-1">{{ entry.title }}</span>
       {% elseif bodyClass == "category" %}
       {{ currentSite.name }} <span class="font-italic padding-left-1">{{ category.title }}</span>
-      {% elseif bodyClass == "information" %}
+      {% elseif bodyClass == "contact" %}
       {{ currentSite.name }} <span class="font-italic padding-left-1">{{ entry.title}}</span>
       {% else %}
       {{ currentSite.name }}

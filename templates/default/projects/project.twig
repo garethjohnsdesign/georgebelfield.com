@@ -175,9 +175,6 @@
         {% if entry.label|length %}<div>Label<span class="padding-left dark-gray">{{ entry.label | striptags('<a>') | raw }}</span></div>{% endif %}
         {% if entry.dop|length %}<div>DOP<span class="padding-left dark-gray">{{ entry.dop | striptags('<a>') | raw }}</span></div>{% endif %}
         {% if entry.editor|length %}<div>Editor<span class="padding-left dark-gray">{{ entry.editor | striptags('<a>') | raw }}</span></div>{% endif %}
-        <div class="medium-gray margin-top-1">{{ entry.postDate|date('Y') }}</div>
-
-
 
         <a class="dark-gray" data-close aria-label="Close modal" type="button">Close</a>
 

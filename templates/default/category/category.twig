@@ -1,7 +1,6 @@
 {% set bodyClass = 'category' %}
 {% set projects = craft.entries
 .relatedTo(category)
-.orderBy('postDate desc')
 .all() %}
 
 {% set seoTitle = category.title %}

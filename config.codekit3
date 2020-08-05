@@ -2164,6 +2164,54 @@
 		"oAP": "/web/assets/fonts/arnhem-blond.woff2",
 		"oF": 0
 		},
+	"/web/assets/fonts/bookman-italic.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/bookman-italic.ttf",
+		"oF": 0
+		},
+	"/web/assets/fonts/bookman-italic.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/bookman-italic.woff",
+		"oF": 0
+		},
+	"/web/assets/fonts/bookman-italic.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/bookman-italic.woff2",
+		"oF": 0
+		},
+	"/web/assets/fonts/bookman-regular.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/bookman-regular.ttf",
+		"oF": 0
+		},
+	"/web/assets/fonts/bookman-regular.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/bookman-regular.woff",
+		"oF": 0
+		},
+	"/web/assets/fonts/bookman-regular.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/web/assets/fonts/bookman-regular.woff2",
+		"oF": 0
+		},
 	"/web/assets/fonts/bradford-italic.woff": {
 		"cB": 0,
 		"ft": 8192,

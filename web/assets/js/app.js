@@ -29,29 +29,6 @@ Foundation.Interchange.SPECIAL_QUERIES['xxlarge-retina'] = 'only screen and (min
 $(document).foundation();
 
 
-// 3. Loading
-// ----------
-
-if (!Cookies.get('loading')) {
-  $(function() {
-    $(".loader").removeClass("hide");
-    $(".loader").addClass("loading");
-    $('.page--testing').removeClass('testing--hide');
-    setTimeout(function(){
-     $(".loader").addClass("loaded");
-     Cookies.set('loading', 'true');
-    }, 2500);
-  });
-
-} else { 
-  setTimeout(function(){
-  $('.page--testing').removeClass('testing--hide');
-  }, 500);
-
-}
-
-
-
 $(function() {
   $("video.video source").each(function() {
     var sourceFile = $(this).attr("data-src");
@@ -163,6 +140,29 @@ $(function() {
 $(function() {
 window.addEventListener('load', AOS.refresh);
 });
+
+
+// 3. Loading
+// ----------
+
+if (!Cookies.get('loading')) {
+  $(function() {
+    $(".loader").removeClass("hide");
+    $(".loader").addClass("loading");
+    $('.page--testing').removeClass('testing--hide');
+    setTimeout(function(){
+     $(".loader").addClass("loaded");
+     Cookies.set('loading', 'true');
+    }, 2500);
+  });
+
+} else { 
+  setTimeout(function(){
+  $('.page--testing').removeClass('testing--hide');
+  }, 500);
+
+}
+
 
 
 }

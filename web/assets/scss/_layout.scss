@@ -457,6 +457,10 @@ p:last-child {
  transform: scale(1.04);
 }
 
+.testing--hide {
+opacity: 0;
+}
+
 .excerpt__wrapper {
   overflow: hidden;
 }
@@ -656,5 +660,41 @@ z-index: -1;
   &.aos-animate {
     filter: blur(0px);
 //     opacity: 1
+  }
+}
+
+// 2. Loading
+// ----------
+
+.loader {
+    pointer-events: none;
+    z-index: 1040;
+    position: fixed;
+    background: $white;
+    color: $black;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    opacity: 0;
+    visibility: visible;
+    transition: opacity .5s ease-out,transform .5s ease-out;
+    transition-delay: 1s;
+/*
+    transform: translateY(0%);
+    transition: transform 800ms;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+*/
+    overflow: hidden;
+  &.loading {
+    opacity: 1;
+  }
+  &.loaded {
+    opacity: 0;
+/*
+    transform: translateY(-100%);
+    transition: transform 800ms;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+*/
   }
 }

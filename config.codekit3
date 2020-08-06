@@ -1303,6 +1303,17 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/node_modules/js-cookie/src/js.cookie.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/node_modules/js-cookie/src/min/js.cookie-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/node_modules/plyr/dist/plyr.min.mjs": {
 		"cB": 0,
 		"ft": 8192,
@@ -1450,6 +1461,14 @@
 		"hM": 0,
 		"oA": 2,
 		"oAP": "/templates/default/_includes/global/head.twig",
+		"oF": 0
+		},
+	"/templates/default/_includes/global/loading.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/templates/default/_includes/global/loading.twig",
 		"oF": 0
 		},
 	"/templates/default/_includes/global/navigation.twig": {

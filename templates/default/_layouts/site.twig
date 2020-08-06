@@ -4,6 +4,10 @@
 
 {% block body %}
 
+<!-- Loading -->
+{% include "_includes/global/loading" %}
+<!-- End Loading -->
+
 <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="push" data-auto-focus="false">
   <div class="grid-x grid-padding-x grid-padding-y padding-bottom-0 align-justify align-middle">
   <div class="shrink cell align-middle padding-bottom-0">
@@ -21,7 +25,8 @@
   </div>
 </div>
 
-<div class="off-canvas-content viewport" data-off-canvas-content>
+<div class="off-canvas-content viewport page--testing testing--hide" data-off-canvas-content>
+
   <!-- Navigation -->
   <nav class="" id="swup-navigation">
   {% block navigation %}

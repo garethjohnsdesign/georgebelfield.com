@@ -5,6 +5,7 @@ import $ from "jquery";
 import Plyr from 'plyr';
 import tippy, {followCursor} from 'tippy.js';
 import swiper from 'swiper/bundle';
+import Cookies from 'js-cookie';
 import Foundation from 'foundation-sites';
 import AOS from 'aos';
 import Swup from 'swup';
@@ -26,6 +27,30 @@ Foundation.Interchange.SPECIAL_QUERIES['xlarge-retina'] = 'only screen and (min-
 Foundation.Interchange.SPECIAL_QUERIES['xxlarge-retina'] = 'only screen and (min-width: 90em), (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2), (min-width: 75em) and (min--moz-device-pixel-ratio: 2), (min-width: 75em) and (-o-min-device-pixel-ratio: 2/1), (min-width: 75em) and (min-device-pixel-ratio: 2), (min-width: 75em) and (min-resolution: 192dpi), (min-width: 75em) and (min-resolution: 2dppx)';
   
 $(document).foundation();
+
+
+// 3. Loading
+// ----------
+
+if (!Cookies.get('loading')) {
+  $(function() {
+    $(".loader").removeClass("hide");
+    $(".loader").addClass("loading");
+    $('.page--testing').removeClass('testing--hide');
+    setTimeout(function(){
+     $(".loader").addClass("loaded");
+     Cookies.set('loading', 'true');
+    }, 2500);
+  });
+
+} else { 
+  setTimeout(function(){
+  $('.page--testing').removeClass('testing--hide');
+  }, 500);
+
+}
+
+
 
 $(function() {
   $("video.video source").each(function() {

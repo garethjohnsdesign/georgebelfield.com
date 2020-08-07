@@ -48,7 +48,7 @@ return [
         'siteUrl'             => getenv('SITE_URL') ?: '@web',
 
         // Set the environmental variables
-        'staticAssetsVersion' => 5,
+        'staticAssetsVersion' => 6,
         
     ],
 

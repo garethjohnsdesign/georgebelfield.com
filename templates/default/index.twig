@@ -41,13 +41,10 @@
           </div>
         </div>
 
-        {% if project.previewVideo %}
-          <video autoplay loop muted playsinline preload="auto" class="video show-for-small-only" poster="">
+        {% if project.previewVideo|length %}
+          <video autoplay loop muted class="video" poster="">
             <source data-src="{{ project.previewVideo }}" type="video/mp4" data-aos="fade-in">
-          </video>
-          <video autoplay loop muted preload="auto" class="video show-for-medium" poster="">
-            <source data-src="{{ project.previewVideo }}" type="video/mp4" data-aos="fade-in">
-          </video>
+          </video>        
         {% endif %}
 
         </div>

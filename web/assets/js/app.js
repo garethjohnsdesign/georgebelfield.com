@@ -30,13 +30,26 @@ $(document).foundation();
 
 
 $(function() {
-  $("video.video source").each(function() {
+  let isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+
+  if (isIOS) {
+    $("video.video").attr("playsinline", "")
+  }
+
+  $("video.video source").each(function(i) {
     var sourceFile = $(this).attr("data-src");
     $(this).attr("src", sourceFile);
     var video = this.parentElement;
-    video.load();
-    video.play();
+
+      setTimeout(function () {
+        if (!video.__played) {
+         video.load()
+        }
+      }, 2000)
   });
+
+  
+  handleVideoPlay(mySwiper)
 });
 
 
@@ -72,6 +85,26 @@ var mySwiper = new swiper('.swiper-container', {
     delay: 5000
   }
 })
+
+var currentPlayingVideo = null
+var handleVideoPlay = function (slider) {
+
+  var $cSlide = slider.slides[slider.activeIndex] //$("[data-swiper-slide-index='" + slider.activeIndex + "']")
+  var $video = $("video", $cSlide)
+  
+  if ($video.length) {
+    if (currentPlayingVideo) {
+      currentPlayingVideo.currentTime = 0
+      currentPlayingVideo.pause()
+    }
+    currentPlayingVideo = $video.get(0)
+    currentPlayingVideo.play();
+    currentPlayingVideo.__played = true
+  }
+}
+mySwiper.on("slideChange", handleVideoPlay)
+mySwiper.on("init", handleVideoPlay)
+
 
 /*
 if (document.querySelector('#carousel--hero')) {

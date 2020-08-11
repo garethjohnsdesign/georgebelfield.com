@@ -19,10 +19,10 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "3.5.0-RC5",
+    "craftcms/cms": "3.5.2",
     "vlucas/phpdotenv": "^2.4.0",
     "craftcms/google-cloud": "1.4.0",
-    "craftcms/redactor": "2.6.1",
+    "craftcms/redactor": "2.7.0",
     "nystudio107/craft-minify": "1.2.10",
     "aelvan/imager": "v2.4.0",
     "ether/seo": "3.6.6",

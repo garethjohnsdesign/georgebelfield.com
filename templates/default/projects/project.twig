@@ -138,28 +138,6 @@
 </div>   
 <!-- End Content -->
 
-
-<!-- About -->
-{% if entry.copy|length %}
-<div class="full reveal" id="reveal{{entry.id}}" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
-
-  <div class="grid-x align-center-middle" style="min-height: 100%">
-    <div class="small-12 cell padding-vertical-3">
-
-      <div class="grid-x grid-padding-x grid-padding-y grid-margin-y align-center">
-        <div class="small-11 medium-8 cell">
-        {{entry.copy}}
-        <a class="dark-gray" data-close aria-label="Close modal" type="button">Close</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-{% endif %}
-<!-- End About -->
-
 <!-- Credits -->
 <div class="full reveal" id="reveal{{entry.id}}" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out">
 
@@ -175,7 +153,10 @@
         {% if entry.label|length %}<div>Label<span class="padding-left dark-gray">{{ entry.label | striptags('<a>') | raw }}</span></div>{% endif %}
         {% if entry.dop|length %}<div>DOP<span class="padding-left dark-gray">{{ entry.dop | striptags('<a>') | raw }}</span></div>{% endif %}
         {% if entry.editor|length %}<div>Editor<span class="padding-left dark-gray">{{ entry.editor | striptags('<a>') | raw }}</span></div>{% endif %}
-
+        
+        <div class="padding-vertical-1">
+        {{entry.copy}}
+        </div>
         <a class="dark-gray" data-close aria-label="Close modal" type="button">Close</a>
 
         </div>
@@ -190,5 +171,17 @@
 
 
 {% block footer %}
-{% include "_includes/global/footer" %}
+<!-- Terms and Privacy -->
+<div class="grid-x grid-padding-x grid-padding-y">
+  <div class="small-12 cell">
+  		<ul class="menu">
+      <li>
+      <a data-open="reveal{{entry.id}}" class="font-italic">
+      Credits
+      </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- End Terms and Privacy -->
 {% endblock %}

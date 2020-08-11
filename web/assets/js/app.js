@@ -175,6 +175,7 @@ window.addEventListener('load', AOS.refresh);
 });
 
 
+
 // 3. Loading
 // ----------
 
@@ -204,7 +205,7 @@ if (!Cookies.get('loading')) {
 // -------------------
 const options = {
   animationSelector: '[class*="swup-transition-"]',
-  containers: [ '#swup-body', '#swup-header', '#swup-overlay', '#swup-navigation', '#swup-footer' ],
+  containers: [ '#swup-body', '#swup-header', '#swup-navigation', '#swup-footer' ],
   plugins: [
     new SwupPreloadPlugin(),
     new SwupBodyClassPlugin(),

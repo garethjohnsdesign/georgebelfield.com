@@ -38170,7 +38170,7 @@
 
 	  var options = {
 	    animationSelector: '[class*="swup-transition-"]',
-	    containers: ['#swup-body', '#swup-header', '#swup-overlay', '#swup-navigation', '#swup-footer'],
+	    containers: ['#swup-body', '#swup-header', '#swup-navigation', '#swup-footer'],
 	    plugins: [new SwupPreloadPlugin(), new SwupBodyClassPlugin(), new SwupGaPlugin(), new SwupScrollPlugin({
 	      doScrollingRightAway: false,
 	      animateScroll: true,

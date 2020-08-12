@@ -1,47 +1,35 @@
 {% import "_macros/isactive" as isactive %}
 
-<!-- Mobile Navigation -->
-{#
-<div class="grid-x grid-padding-x grid-padding-y hide-for-medium" id="swup-header" style="z-index: 14">
-  <div class="shrink cell">
-    <a class="" type="button" aria-label="Navigation" data-toggle="overlayNavigation">
-    {{ currentSite.name }}
-    </a>
-  </div>
-</div>
-#}
-<!-- End Mobile Navigation -->
-
 <!-- Desktop Navigation -->
 <div class="grid-x grid-padding-x grid-padding-y padding-bottom-0 align-justify align-middle navigation" id="swup-header">
 
+
   <div class="auto cell align-middle padding-bottom-0">
+  		<ul class="menu">
+      <li>
+      {% if bodyClass == "project" %}
+      <span class="font-italic">{{ entry.title }}</span><span class="padding-left-1">{{ entry.brandArtist | striptags}}</span>
+      {% elseif bodyClass == "category" %}
+      {{ currentSite.name }}<span class="font-italic padding-left-1">{{ category.title }}</span>
+      {% elseif bodyClass == "contact" %}
+      <span class="font-italic">{{ entry.title}}</span><span class="padding-left-1">{{ currentSite.name }}</span>
+      {% else %}
+      {{ currentSite.name }}
+      {% endif %}
+      </li>
+    </ul>
+  </div>
+
+  <div class="shrink cell align-middle padding-bottom-0">
 		<ul class="menu">
       <li>
-      <button class="hamburger hamburger--criss-cross" id="menuBar" type="button" data-toggle="menuBar offCanvasLeft" data-toggler="active">
+      <button class="hamburger hamburger--criss-cross" id="menuBar" type="button" data-toggle="menuBar offCanvasRight" data-toggler="active">
           <div class="inner">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
           </div>
       </button>
-
-      </li>
-    </ul>
-  </div>
-
-  <div class="shrink cell align-middle padding-bottom-0">
-  		<ul class="menu">
-      <li>
-      {% if bodyClass == "project" %}
-      <span class="font-italic">{{ entry.title }}</span><span class="padding-left-1">{{ entry.brandArtist | striptags}}</span>
-      {% elseif bodyClass == "category" %}
-      <span class="font-italic">{{ category.title }}</span><span class="padding-left-1">{{ currentSite.name }}</span>
-      {% elseif bodyClass == "contact" %}
-      <span class="font-italic">{{ entry.title}}</span><span class="padding-left-1">{{ currentSite.name }}</span>
-      {% else %}
-      {{ currentSite.name }}
-      {% endif %}
       </li>
     </ul>
   </div>

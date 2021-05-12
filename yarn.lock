@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@popperjs/core@^2.3.2":
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.3.3.tgz#8731722aeb7330e8fd9eb5d424be6b98dea7d6da"
-  integrity sha512-yEvVC8RfhRPkD9TUn7cFcLcgoJePgZRAOR7T21rcRY5I8tpuhzeWfGa7We7tB14fe9R7wENdqUABcMdwD4SQLw==
+"@popperjs/core@^2.8.3":
+  version "2.9.2"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.2.tgz#adea7b6953cbb34651766b0548468e743c6a2353"
+  integrity sha512-VZMYa7+fXHdwIq1TDhSXoVmSPEGM/aa+6Aiq3nVVJ9bXr24zScr+NlKFKC3iPljA7ho/GAZr+d2jOf5GIRC30Q==
 
 "@swup/body-class-plugin@^1.0.2":
   version "1.0.2"
@@ -64,10 +64,10 @@ classlist-polyfill@^1.0.3:
   resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
   integrity sha1-k1vC39lFiodrJ5YXUUY4vKqWSi4=
 
-core-js@^3.6.4:
-  version "3.6.5"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
-  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
+core-js@^3.10.1:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.12.1.tgz#6b5af4ff55616c08a44d386f1f510917ff204112"
+  integrity sha512-Ne9DKPHTObRuB09Dru5AjwKjY4cJHVGu+y5f7coGn1E9Grkc3p2iBwE9AI/nJzsE29mQF7oq+mhYYRqOMFN1Bw==
 
 custom-event-polyfill@^1.0.7:
   version "1.0.7"
@@ -84,22 +84,32 @@ delegate@^3.2.0:
   resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
   integrity sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
 
-foundation-sites@^6.6.1:
+delicious-hamburgers@^1.0.3:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/delicious-hamburgers/-/delicious-hamburgers-1.1.0.tgz#a43ec327cafcd7d50b72ad355da803879c85d925"
+  integrity sha512-nWO5y6miifAjnjK4f676w4gabyyjU+IXsJ80LRjJ5i44bchPsNQT3MXVvxtdxJPwwD0UcWokQ3JWLUL9TLROog==
+
+dom7@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-3.0.0.tgz#b861ce5d67a6becd7aaa3ad02942ff14b1240331"
+  integrity sha512-oNlcUdHsC4zb7Msx7JN3K0Nro1dzJ48knvBOnDPKJ2GV9wl1i5vydJZUSyOfrkKFDZEud/jBsTk92S/VGSAe/g==
+  dependencies:
+    ssr-window "^3.0.0-alpha.1"
+
+foundation-sites@^6.6.3:
   version "6.6.3"
   resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.6.3.tgz#8ca5f246357db69e6a0e73351ce06aa8acce6540"
   integrity sha512-8X93wUAmUg1HhVv8uWMWnwoBLSQWSmFImJencneIZDctswn724Bq/MV1cbPZN/GFWGOB/9ngoQHztfzd4+ovCg==
 
-jquery-lazy@^1.7.10:
-  version "1.7.10"
-  resolved "https://registry.yarnpkg.com/jquery-lazy/-/jquery-lazy-1.7.10.tgz#aa3d43d058bf1ea89284214f4521f6d9a162d051"
-  integrity sha512-1vBpU+igfZJ58BrQrk2OFl3TMriGeIfZUg35uSIajZF4GcxF96NtdS3LbWk5a72rH2ypz0odTsAkqhUsICknhw==
-  dependencies:
-    jquery ">=1.7.2"
+jquery@^3.5.1:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
+  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
 
-jquery@>=1.7.2, jquery@^3.4.1:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9"
-  integrity sha512-Xb7SVYMvygPxbFMpTFQiHh1J7HClEaThguL15N/Gg37Lri/qKyhRGZYzHRyLH8Stq3Aow0LsHO2O2ci86fCrNQ==
+js-cookie@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
 loadjs@^4.2.0:
   version "4.2.0"
@@ -126,18 +136,18 @@ opencollective-postinstall@^2.0.2:
   resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
   integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
 
-plyr@^3.5.10:
-  version "3.5.10"
-  resolved "https://registry.yarnpkg.com/plyr/-/plyr-3.5.10.tgz#631fb379135abd17ea822817db3046b484c8166c"
-  integrity sha512-wbbSuzk3yKVOmYWQUnxG1bxikqZNkxZmL3OjS1DFVU0D2Uko1evGY72LuD9rm/HnNCNzcTuc0c6MCn7bRRpUTA==
+plyr@^3.6.2:
+  version "3.6.7"
+  resolved "https://registry.yarnpkg.com/plyr/-/plyr-3.6.7.tgz#af8aceb30aeaf34bbcb8f13e2c71100f4752e4b1"
+  integrity sha512-jKuxZk3iMu7F2gDT7QlaIvODPdMbwhKl0jiF/L8tKhhZ+nXcXw24GjycYZllQSTIMOdiB8Cma22oaGjOl9EtzA==
   dependencies:
-    core-js "^3.6.4"
+    core-js "^3.10.1"
     custom-event-polyfill "^1.0.7"
     loadjs "^4.2.0"
-    rangetouch "^2.0.0"
-    url-polyfill "^1.1.8"
+    rangetouch "^2.0.1"
+    url-polyfill "^1.1.12"
 
-rangetouch@^2.0.0:
+rangetouch@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/rangetouch/-/rangetouch-2.0.1.tgz#c01105110fd3afca2adcb1a580692837d883cb70"
   integrity sha512-sln+pNSc8NGaHoLzwNBssFSf/rSYkqeBXzX1AtJlkJiUaVSJSbRAWJk+4omsXkN+EJalzkZhWQ3th1m0FpR5xA==
@@ -147,6 +157,19 @@ scrl@^1.0.0:
   resolved "https://registry.yarnpkg.com/scrl/-/scrl-1.0.0.tgz#b225915f29d72807c48b2e116b12f14b15d14e55"
   integrity sha512-nTS2W6UyxYfvOOjeXGXM1j140bm2ZUIjt0mEyGUHecFz2zU1CMYJ71dWPdlnSJR2mYOojY1R5qpo4Fi83O7tog==
 
+ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
+  integrity sha512-q+8UfWDg9Itrg0yWK7oe5p/XRCJpJF9OBtXfOPgSJl+u3Xd5KI328RUEvUqSMVM9CiQUEf1QdBzJMkYGErj9QA==
+
+swiper@^6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.5.1.tgz#795630e45bbebb3b3b2945d55c22ffdcf5536c1b"
+  integrity sha512-iuyg4cr+L7wo5EI0fWUuW+lT3BnNtVTYtInhUC5JImTr0i8jNranx8BPyN8AOSKa6jBYN+oaCzj8DAwGK+ngRg==
+  dependencies:
+    dom7 "^3.0.0"
+    ssr-window "^3.0.0"
+
 swup@^2.0.0, swup@^2.0.9:
   version "2.0.9"
   resolved "https://registry.yarnpkg.com/swup/-/swup-2.0.9.tgz#1930fa969e833ba630f7c1ff12bd601eb2f40461"
@@ -155,19 +178,19 @@ swup@^2.0.0, swup@^2.0.9:
     delegate "3.1.3"
     opencollective-postinstall "^2.0.2"
 
-tippy.js@^6.1.0:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.2.0.tgz#b6c35dc15a9eb7fe91a562d65469c1a3277f26f6"
-  integrity sha512-xb7xq4vSkrhZHvbRx7l8otFL7z2id+U0VPDX+MHXa8B/4PtJ/nvap6/peLHjMk45VmRIvEhF0KFoqviJ6EEtug==
+tippy.js@^6.2.6:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-6.3.1.tgz#3788a007be7015eee0fd589a66b98fb3f8f10181"
+  integrity sha512-JnFncCq+rF1dTURupoJ4yPie5Cof978inW6/4S6kmWV7LL9YOSEVMifED3KdrVPEG+Z/TFH2CDNJcQEfaeuQww==
   dependencies:
-    "@popperjs/core" "^2.3.2"
+    "@popperjs/core" "^2.8.3"
 
-url-polyfill@^1.1.8:
-  version "1.1.8"
-  resolved "https://registry.yarnpkg.com/url-polyfill/-/url-polyfill-1.1.8.tgz#21eb58ad61192f52b77dcac8ab5293ae7bc67060"
-  integrity sha512-Ey61F4FEqhcu1vHSOMmjl0Vd/RPRLEjMj402qszD/dhMBrVfoUsnIj8KSZo2yj+eIlxJGKFdnm6ES+7UzMgZ3Q==
+url-polyfill@^1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/url-polyfill/-/url-polyfill-1.1.12.tgz#6cdaa17f6b022841b3aec0bf8dbd87ac0cd33331"
+  integrity sha512-mYFmBHCapZjtcNHW0MDq9967t+z4Dmg5CJ0KqysK3+ZbyoNOWQHksGCTWwDhxGXllkWlOc10Xfko6v4a3ucM6A==
 
-what-input@^5.2.7:
-  version "5.2.7"
-  resolved "https://registry.yarnpkg.com/what-input/-/what-input-5.2.7.tgz#81afbb6b82882cff8c43fa7ff1054aa46f288ffa"
-  integrity sha512-ruCP2skyygi0ZHnMicHuZP7vXnJh8uJXs9R7RX488HlWigSdzngdmKo5Ti11Iatp1dnYp55VfioP/WevPaK+xQ==
+what-input@^5.2.10:
+  version "5.2.10"
+  resolved "https://registry.yarnpkg.com/what-input/-/what-input-5.2.10.tgz#f79f5b65cf95d75e55e6d580bb0a6b98174cad4e"
+  integrity sha512-7AQoIMGq7uU8esmKniOtZG3A+pzlwgeyFpkS3f/yzRbxknSL68tvn5gjE6bZ4OMFxCPjpaBd2udUTqlZ0HwrXQ==
